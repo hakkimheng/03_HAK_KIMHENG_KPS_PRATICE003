@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+   </head>
+   <body>
+      <h1 class="font-bold text-3xl text-center py-10">Practice HAK KIMHENG</h1>
+      <section class="flex justify-around">
+          <!-- input form -->
+           <form class="flex flex-col gap-3 w-[20%]">
+                <h2 class="font-bold text-2xl">
+                  Add Task
+                </h2>
+                <!-- input name -->
+                <section>
+                  <label for="default-input" class="block mb-2 text-sm font-medium text-black">Name</label>
+                  <input type="text" placeholder="Name" id="name-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                  <p class="text-red-700" id="error"></p>
+                </section>
+  
+                <!-- select date -->
+                 <section>
+                  <label for="date" class="block mb-2 text-sm font-medium text-black">Choice Date</label>
+                  <div class="relative max-w-sm">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+                      <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                      </svg>
+                    </div>
+                    <input datepicker id="date-datepicker" type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Select date">
+                  
+                  </div>
+                  <p class="text-red-700" id="error_date"></p>
+                 </section>
+  
+                <!-- choice level -->
+  
+                <section>
+                  <h2 class="block mb-2 text-sm font-medium text-black">
+                    Choice Level
+                  </h2>
+                  <select id="select_Priority" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Select Priority</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                  </select>  
+                  <p class="text-red-700" id="error_select"></p>
+                </section>
+    
+                <button id="add_list" class="text-black-300 p-2 border rounded-lg font-bold bg-gray-300 hover:text-white hover:bg-blue-950 mt-10">
+                  Add to List
+                </button>
+           </form>
+
+           <!-- list task -->
+           <section class="flex flex-col gap-4">
+            <h2 class="text-2xl font-bold">Task List</h2>
+              <div class="relative overflow-x-auto shadow-md sm:rounded-lg w-200">
+                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+                    <thead class="text-xs text-gray-700 uppercase bg-gray-300 ">
+                        <tr>
+                          <th scope="col" class="px-6 py-3">Task name</th>
+                          <th scope="col" class="px-6 py-3">Due Date</th>
+                          <th scope="col" class="px-6 py-3">Priority</th>
+                          <th scope="col" class="px-6 py-3">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+              </div>
+          </section>
+
+    
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+      <script src="../JS/script.js"></script>
+
+   </body>
+</html>
